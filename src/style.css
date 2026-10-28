@@ -145,7 +145,8 @@ line-height:1}
   position:relative;
   overflow:hidden;
 min-width:0}
-.hero-visual>img {
+.hero-visual>img,
+.hero-video {
   width:100%;
   height:100%;
   position:absolute;
@@ -655,7 +656,8 @@ margin:16px 0 0}
   }
   .hero-visual {
   height:370px}
-  .hero-visual>img {
+  .hero-visual>img,
+  .hero-video {
   object-position:center 55%}
   .image-label {
     top:20px;

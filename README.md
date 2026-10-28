@@ -53,6 +53,8 @@ Telegram: https://core.telegram.org/bots та https://core.telegram.org/bots/api
 
 ## Контент і графіка
 
+- Головний блок використовує погоджений монтаж Volvo у порядку **5 → 3 → 2 → 1**. `public/video/hero-volvo.mp4`: H.264, 1920×1080, 25 кадрів/с, 6,08 с, близько 2,34 МБ, без аудіо. Оптимізовано з `review/volvo-driving/volvo-driving.mp4` (CRF 24, faststart) без зміни порядку, швидкості чи склейок. `public/images/hero-volvo.jpg` — постер із першої сцени. Ролик повторюється без кнопки паузи; автоматично зупиняється поза екраном та в неактивній вкладці. За `prefers-reduced-motion`, економії даних, помилки відео або блокування автозапуску залишається постер. Джерело обрано замовником: [Volvo Trucks – The Volvo FH - Moving your business forward](https://www.youtube.com/watch?v=t-bHrnLfYQ0). Це ілюстративна зйомка Volvo Trucks, не власний автопарк AIK.
+
 - `public/logos/aik.svg` — окремий векторний логотип, вручну відтворений за мотивами наданого зображення; не точне трасування дрібної растрової емблеми.
 - Фотографії Unsplash є ілюстративними, не документують власний автопарк: https://unsplash.com/photos/1519003722824-194d4455a60c (джерело файлу: images.unsplash.com/photo-1519003722824-194d4455a60c) та images.unsplash.com/photo-1601584115197-04ecc0da31d7. Третя картка використовує ілюстративне фото Renault Master із суцільнометалевим вантажним кузовом; воно не є фотографією власного автомобіля компанії.
 - Офіційний SVG «Ерідон»: https://www.eridon.ua/i/cat/-2/logo.svg
