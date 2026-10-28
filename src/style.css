@@ -325,29 +325,6 @@ color:#6b786f}
 text-align:right}
 .partners {
 padding-top:20px}
-.partner-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--line);
-border-left:1px solid var(--line)}
-.partner-grid>div {
-  height:145px;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:35px;
-color:#617269}
-.partner-grid img {
-  max-width:180px;
-  max-height:65px;
-  object-fit:contain;
-  filter:grayscale(1);
-mix-blend-mode:multiply}
-.partner-grid svg {
-  max-width:210px;
-width:100%}
 .why {
   background:#e9ede6;
   display:grid;
@@ -630,9 +607,6 @@ margin:16px 0 0}
   gap:5px}
   .vehicle dd {
   text-align:left}
-  .partner-grid>div {
-    height:120px;
-  padding:25px}
   .why {
   gap:7%}
   .footer-top .button {
@@ -744,14 +718,6 @@ margin:16px 0 0}
   .outline {
     min-height:48px;
   padding:14px 20px}
-  .partner-grid {
-  grid-template-columns:1fr 1fr}
-  .partner-grid>div {
-    height:105px;
-  padding:20px}
-  .partner-grid img {
-    max-width:130px;
-  max-height:50px}
   .partners {
   padding-top:10px}
   .why {
@@ -1079,9 +1045,6 @@ h3, .service-group h3, .vehicle h3, .reasons h3  {
   .image-label  {
     max-width: calc(100% - 40px);
   }
-  .partner-grid img  {
-    max-width: 100%;
-  }
   .modal-content  {
     padding: 64px 22px 24px;
   }
@@ -1179,25 +1142,6 @@ button { transition: background-color .25s, color .25s, border-color .25s; }
 }
 
 /* Original partner artwork keeps its brand colors and proportions. */
-.partner-grid img { filter: none; mix-blend-mode: normal; }
-.partner-grid .partner-parallel { background: #009145; }
-.partner-grid .partner-parallel img { width: 230px; max-width: 100%; }
-.partner-grid .partner-obolon { padding: 15px; }
-.partner-grid .partner-obolon img {
-  width: 220px;
-  height: 115px;
-  max-width: 100%;
-  max-height: none;
-  object-fit: cover;
-}
-
-
-
-@media(max-width:580px) {
-  .partner-grid .partner-obolon img { width: 150px; height: 79px; }
-  .partner-grid .partner-parallel { padding: 16px; }
-
-}
 
 /* Four equally styled service groups in a balanced two-column layout. */
 @media(min-width:901px) {
@@ -1211,4 +1155,76 @@ button { transition: background-color .25s, color .25s, border-color .25s; }
   min-height: 132px;
   max-height: 320px;
   resize: vertical;
+}
+
+/* Official partner marks retain their original artwork and proportions. */
+
+
+/* Partner cards share fixed tracks; artwork cannot change the grid geometry. */
+.partner-grid {
+  --partner-height: 160px;
+  --partner-padding: 24px;
+  --partner-logo-width: 220px;
+  --partner-logo-height: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: var(--partner-height);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.partner-grid > div {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: var(--partner-padding);
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.partner-grid img {
+  display: block;
+  width: var(--partner-logo-width);
+  height: var(--partner-logo-height);
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: none;
+  mix-blend-mode: normal;
+}
+.partner-grid .partner-parallel { background: #009145; }
+/* These supplied PNGs have extra empty canvas around the visible mark. */
+.partner-grid .partner-obolon img {
+  height: calc(var(--partner-logo-height) * 1.375);
+  object-fit: cover;
+}
+.partner-grid .partner-omega img {
+  width: calc(var(--partner-logo-width) * 1.1);
+  object-fit: cover;
+}
+@media(max-width:900px) {
+  .partner-grid {
+    --partner-height: 140px;
+    --partner-padding: 20px;
+    --partner-logo-width: 200px;
+    --partner-logo-height: 72px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media(max-width:580px) {
+  .partner-grid {
+    --partner-height: 120px;
+    --partner-padding: 16px;
+    --partner-logo-width: 150px;
+    --partner-logo-height: 64px;
+  }
+}
+
+@media(min-width:581px) {
+  .partner-grid .partner-omega img {
+    width: calc(var(--partner-logo-width) * .8415);
+    height: calc(var(--partner-logo-height) * .765);
+  }
 }
