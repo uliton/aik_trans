@@ -26,11 +26,11 @@ html {
 scroll-padding-top:110px}
 body {
 margin:0}
-button,input,a {
+button,input,textarea,a {
 -webkit-tap-highlight-color:transparent}
 button,a {
 touch-action:manipulation}
-button,input {
+button,input,textarea {
 font:inherit}
 button,a {
 color:inherit}
@@ -485,7 +485,7 @@ letter-spacing:-1px}
 .modal form>label {
   display:block;
 margin-bottom:18px}
-.modal input:not([type=checkbox]) {
+.modal :is(input:not([type=checkbox]), textarea) {
   display:block;
   width:100%;
   padding:14px 0;
@@ -496,7 +496,7 @@ margin-bottom:18px}
   border-radius:0;
   margin-top:5px;
 }
-.modal input::placeholder {
+.modal :is(input, textarea)::placeholder {
 color:#8a938a}
 .modal form .consent {
   display:flex;
@@ -828,7 +828,7 @@ body, .hero-description, .about-body > p, .service-group ul,
   line-height: 1.65;
 }
 .nav, .nav a, .header-phone, .header-cta, .button, .round-cta,
-.footer-bottom nav, .modal input:not([type=checkbox])  {
+.footer-bottom nav, .modal :is(input:not([type=checkbox]), textarea)  {
   font-size: var(--text-control);
   line-height: 1.5;
 }
@@ -1107,14 +1107,14 @@ button { transition: background-color .25s, color .25s, border-color .25s; }
 .header-cta:hover { background: var(--green); color: #fff; }
 .menu-toggle:hover { background: #e9ede6; }
 .close:hover { background: #31554b; }
-.modal input:not([type=checkbox]) {
+.modal :is(input:not([type=checkbox]), textarea) {
   padding: 14px 12px;
   border: 1px solid #c5cfc3;
   background: #ffffff70;
   border-radius: 6px;
   transition: border-color .2s, box-shadow .2s, background-color .2s;
 }
-.modal input:not([type=checkbox]):focus {
+.modal :is(input:not([type=checkbox]), textarea):focus {
   outline: none;
   border-color: #638377;
   background: #fff;
@@ -1205,4 +1205,10 @@ button { transition: background-color .25s, color .25s, border-color .25s; }
   .service-group { padding-top: 32px; padding-bottom: 24px; }
   .service-group:nth-child(odd) { border-left: 0; padding-left: 0; }
   .service-group:nth-child(n+3) { border-top: 1px solid #c9d2c6; }
+}
+
+.modal textarea {
+  min-height: 132px;
+  max-height: 320px;
+  resize: vertical;
 }

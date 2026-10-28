@@ -23,15 +23,3 @@ export function phoneCaret(formatted, digitsBeforeCaret) {
   }
   return formatted.length;
 }
-
-export const asciiEmail = (value) => /^[\x21-\x7E]*$/.test(value);
-export function validEmail(value) {
-  if (value.length > 254 || !asciiEmail(value)) return false;
-  const parts = value.split('@');
-  if (parts.length !== 2) return false;
-  const [local, domain] = parts;
-  if (!local || local.length > 64 || local.startsWith('.') || local.endsWith('.') || local.includes('..')) return false;
-  if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+$/.test(local)) return false;
-  const labels = domain.split('.');
-  return labels.length >= 2 && labels.every(label => /^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$/.test(label)) && /^[a-zA-Z]{2,63}$/.test(labels.at(-1));
-}
