@@ -1166,3 +1166,14 @@ button { transition: background-color .25s, color .25s, border-color .25s; }
 @media(max-width:580px) {
   .callback { right: 16px; bottom: 100px; min-height: 52px; padding: 12px 16px; }
 }
+
+/* Three company metrics share equal columns; small screens stack cleanly. */
+.stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.stats strong { font-size: clamp(2.25rem, 4vw, 4rem); }
+.stats p { max-width: none; }
+@media(max-width:580px) {
+  .stats { grid-template-columns: 1fr; gap: 24px; }
+  .stats > div { display: flex; align-items: center; gap: 24px; }
+  .stats strong { min-width: 125px; font-size: 3rem; }
+  .stats p { margin: 0; }
+}
