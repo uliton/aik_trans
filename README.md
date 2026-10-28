@@ -54,7 +54,7 @@ Telegram: https://core.telegram.org/bots та https://core.telegram.org/bots/api
 ## Контент і графіка
 
 - `public/logos/aik.svg` — окремий векторний логотип, вручну відтворений за мотивами наданого зображення; не точне трасування дрібної растрової емблеми.
-- Фотографії Unsplash є ілюстративними, не документують власний автопарк: https://unsplash.com/photos/1519003722824-194d4455a60c (джерело файлу: images.unsplash.com/photo-1519003722824-194d4455a60c) та images.unsplash.com/photo-1601584115197-04ecc0da31d7. Для третьої картки тимчасово повторено фото вантажівки; бажано замінити власним фото цільнометалевого автомобіля.
+- Фотографії Unsplash є ілюстративними, не документують власний автопарк: https://unsplash.com/photos/1519003722824-194d4455a60c (джерело файлу: images.unsplash.com/photo-1519003722824-194d4455a60c) та images.unsplash.com/photo-1601584115197-04ecc0da31d7. Третя картка використовує ілюстративне фото Renault Master із суцільнометалевим вантажним кузовом; воно не є фотографією власного автомобіля компанії.
 - Офіційний SVG «Ерідон»: https://www.eridon.ua/i/cat/-2/logo.svg
 - Офіційний PNG Fenix Agro: https://fenix-agro.com/frontend/assets/img/logo.png.pagespeed.ce.cCWC99bYif.png
 - Чотири решти партнерів — текстові SVG-заглушки в `src/main.jsx`, не оригінальні торгові знаки. Партнери взяті з макета; список не перевіряє факт співпраці.
@@ -84,3 +84,5 @@ Telegram: https://core.telegram.org/bots та https://core.telegram.org/bots/api
 - Оболонь: https://seeklogo.com/vector-logo/447225/obolon — https://images.seeklogo.com/logo-png/44/1/obolon-logo-png_seeklogo-447225.png
 - Укрнафта: https://commons.wikimedia.org/wiki/File:Ukrnafta.png — https://upload.wikimedia.org/wikipedia/commons/9/9c/Ukrnafta.png
 - Parallel: https://parallel.ua/ — SVG шапки сайту. Білий напис збережено без перефарбовування та розміщено на зеленому тлі.
+
+Фото Renault Master у картці «Цільнометалеві»: https://www.autohaus.de/mediathek/renault-master-2024-3456837 — файл https://cdn.autohaus.de/thumb_1200x675/media/5172/renault4.jpg. На фото — вантажний фургон із закритими металевими боковинами без вікон у вантажному відсіку.
