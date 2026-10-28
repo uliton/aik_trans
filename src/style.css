@@ -1190,16 +1190,19 @@ button { transition: background-color .25s, color .25s, border-color .25s; }
   max-height: none;
   object-fit: cover;
 }
-.customs-service {
-  padding: 28px 32px;
-  margin-bottom: 32px;
-  border-left: 4px solid var(--green);
-  background: #f6f5f0;
-}
-.customs-service h3 { margin: 0 0 8px; }
-.customs-service p { margin: 0; color: #52655b; font-size: var(--text-body); }
+
+
+
 @media(max-width:580px) {
   .partner-grid .partner-obolon img { width: 150px; height: 79px; }
   .partner-grid .partner-parallel { padding: 16px; }
-  .customs-service { padding: 24px 20px; }
+
+}
+
+/* Four equally styled service groups in a balanced two-column layout. */
+@media(min-width:901px) {
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-group { padding-top: 32px; padding-bottom: 24px; }
+  .service-group:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .service-group:nth-child(n+3) { border-top: 1px solid #c9d2c6; }
 }
