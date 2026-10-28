@@ -1177,3 +1177,29 @@ button { transition: background-color .25s, color .25s, border-color .25s; }
   .stats strong { min-width: 125px; font-size: 3rem; }
   .stats p { margin: 0; }
 }
+
+/* Original partner artwork keeps its brand colors and proportions. */
+.partner-grid img { filter: none; mix-blend-mode: normal; }
+.partner-grid .partner-parallel { background: #009145; }
+.partner-grid .partner-parallel img { width: 230px; max-width: 100%; }
+.partner-grid .partner-obolon { padding: 15px; }
+.partner-grid .partner-obolon img {
+  width: 220px;
+  height: 115px;
+  max-width: 100%;
+  max-height: none;
+  object-fit: cover;
+}
+.customs-service {
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  border-left: 4px solid var(--green);
+  background: #f6f5f0;
+}
+.customs-service h3 { margin: 0 0 8px; }
+.customs-service p { margin: 0; color: #52655b; font-size: var(--text-body); }
+@media(max-width:580px) {
+  .partner-grid .partner-obolon img { width: 150px; height: 79px; }
+  .partner-grid .partner-parallel { padding: 16px; }
+  .customs-service { padding: 24px 20px; }
+}

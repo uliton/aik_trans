@@ -78,4 +78,9 @@ Telegram: https://core.telegram.org/bots та https://core.telegram.org/bots/api
 
 Телефон відображається як `+380` поза інпутом і `11 222 33 44` у полі; запит містить повний номер `+380112223344`. Вставлені повні українські номери нормалізуються. Ім’я відкидає цифри та сторонні символи. E-mail приймає лише ASCII-символи без пробілів, перевіряє локальну частину й домен. Введення нелатинських символів блокується з поясненням у формі. Перевірка у браузері не замінює серверну валідацію майбутнього приймача заявок.
 
-Додаткові партнери: Метінвест (офіційний SVG: https://www.metinvestholding.com/Content/CmsFile/ua/Images__Logo.svg), Оболонь, Укрнафта та Паралель (текстові SVG-заглушки, не оригінальні логотипи). Перелік надано замовником.
+Додаткові партнери: Метінвест (офіційний SVG: https://www.metinvestholding.com/Content/CmsFile/ua/Images__Logo.svg), Оболонь (пивна компанія, справжній логотип із Seeklogo), Укрнафта (корпоративний логотип із Wikimedia Commons) та Parallel (оригінальний SVG із шапки офіційного сайту мережі АЗК). Перелік надано замовником.
+
+Джерела оновлених логотипів:
+- Оболонь: https://seeklogo.com/vector-logo/447225/obolon — https://images.seeklogo.com/logo-png/44/1/obolon-logo-png_seeklogo-447225.png
+- Укрнафта: https://commons.wikimedia.org/wiki/File:Ukrnafta.png — https://upload.wikimedia.org/wikipedia/commons/9/9c/Ukrnafta.png
+- Parallel: https://parallel.ua/ — SVG шапки сайту. Білий напис збережено без перефарбовування та розміщено на зеленому тлі.
